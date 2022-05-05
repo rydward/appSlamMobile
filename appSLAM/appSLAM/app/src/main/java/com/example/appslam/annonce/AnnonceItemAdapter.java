@@ -9,6 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.example.appslam.R;
+import com.example.appslam.chat.Chat;
 
 import java.util.List;
 

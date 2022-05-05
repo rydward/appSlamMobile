@@ -13,16 +13,16 @@ import com.example.appslam.annonce.annoncesItem;
 
 import java.util.List;
 
-public class messageEnvoiAdapter extends BaseAdapter {
+public class messageRecuAdapter extends BaseAdapter {
 
     private Context context;
-    private List<Chat> listMessageEnvoi;
+    private List<Chat> listMessageRecu;
     private LayoutInflater inflater;
     private int count;
 
-    public messageEnvoiAdapter(Context context, List<Chat> listMessageEnvoi){
+    public messageRecuAdapter(Context context, List<Chat> listMessageRecu){
         this.context = context;
-        this.listMessageEnvoi = listMessageEnvoi;
+        this.listMessageRecu = listMessageRecu;
         this.inflater = LayoutInflater.from(context);
     }
 
@@ -32,12 +32,12 @@ public class messageEnvoiAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        System.out.println(listMessageEnvoi.size());
-        return listMessageEnvoi.size(); }
+        System.out.println(listMessageRecu.size());
+        return listMessageRecu.size(); }
 
     @Override
     public Chat getItem(int position) {
-        return listMessageEnvoi.get(position);
+        return listMessageRecu.get(position);
     }
 
     @Override
@@ -55,7 +55,7 @@ public class messageEnvoiAdapter extends BaseAdapter {
         String itemNom = currentItem.getUserrecoi();
 
         TextView destinataire = view.findViewById(R.id.Destinataire);
-        destinataire.setText("Déstinataire : "+ itemNom);
+        destinataire.setText("Message de : "+ itemNom);
         TextView contenu = view.findViewById(R.id.message);
         contenu.setText(itemContenu);
 

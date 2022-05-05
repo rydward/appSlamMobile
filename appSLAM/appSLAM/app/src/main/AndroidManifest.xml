@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppSLAM">
         <activity
+            android:name=".chat.activityMessageRecu"
+            android:exported="false" />
+        <activity
             android:name=".chat.activityEnvoiDesMessages"
             android:exported="false" />
         <activity

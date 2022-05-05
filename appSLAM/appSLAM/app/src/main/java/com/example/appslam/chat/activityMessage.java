@@ -39,6 +39,12 @@ public class activityMessage extends AppCompatActivity {
         startActivity(envoiMessage);
     }
 
+    public void onNavReceptionMessage(View v){
+        Intent receptionMessage = new Intent(this, activityMessageRecu.class);
+        receptionMessage.putExtra("utilisateurId", extra);
+        startActivity(receptionMessage);
+    }
+
     public static class JWTUtils {
 
         public static String getJson(String token) throws UnsupportedEncodingException{

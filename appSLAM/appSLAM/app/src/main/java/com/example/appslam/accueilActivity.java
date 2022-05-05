@@ -66,7 +66,7 @@ public class accueilActivity extends AppCompatActivity implements BottomNavigati
                 envoiMessage.putExtra("utilisateurId", extra);
                 startActivity(envoiMessage);
 
-                    fragment = chatFragment;
+                //fragment = chatFragment;
                 break;
 
         }

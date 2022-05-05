@@ -1,20 +1,24 @@
 package com.example.appslam.chat;
 
 import java.util.Date;
+import java.util.List;
 
 public class Chat {
     Integer id;
     String contenu;
     String dateenvoi;
-    String[] userrecoi;
-    String[] userenvoi;
+    String userrecoi;
+    String userenvoi;
 
-    public Chat(Integer id, String contenu, String dateenvoi, String[] userrecoi, String[] userenvoi) {
+    public Chat(Integer id, String contenu, String dateenvoi, String userrecoi, String userenvoi) {
         this.id = id;
         this.contenu = contenu;
         this.dateenvoi = dateenvoi;
         this.userrecoi = userrecoi;
         this.userenvoi = userenvoi;
+    }
+
+    public Chat(List<Chat> messageEnvoiItemsList) {
     }
 
     public Integer getId() {
@@ -29,11 +33,11 @@ public class Chat {
         return dateenvoi;
     }
 
-    public String[] getUserrecoi() {
+    public String getUserrecoi() {
         return userrecoi;
     }
 
-    public String[] getUserenvoi() {
+    public String getUserenvoi() {
         return userenvoi;
     }
 
